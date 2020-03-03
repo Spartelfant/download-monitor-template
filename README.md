@@ -1,2 +1,2 @@
 # download-monitor-template
-[WordPress] [plugin] Download Monitor &amp;mdash; Custom Template Documentation
+[WordPress] [plugin] Download Monitor &mdash; Custom Template Documentation
