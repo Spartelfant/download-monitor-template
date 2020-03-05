@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-	let myLabels = document.querySelectorAll('.lbl-toggle');
+	let myLabels = document.querySelectorAll('.toggleExpandCollapse-lbl');
 	Array.from(myLabels).forEach(label => {
 		label.addEventListener('keydown', e => {
 			// 32 === spacebar
