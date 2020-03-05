@@ -23,13 +23,21 @@ function getNearestTableAncestor(htmlElementNode) {
 }
 
 function toggleExpandCollapse(masterToggler) {
-	let parentTable = getNearestTableAncestor(masterToggler);
+	var parentTable = getNearestTableAncestor(masterToggler);
 	if (parentTable) {
-		let masterState = masterToggler.checked;
-		let checkboxes = parentTable.getElementsByTagName('input');
-		for (let i = 0; i < checkboxes.length; i++) {
-			if (checkboxes[i].type === 'checkbox') {
-				checkboxes[i].checked = masterState;
+		var checkboxes = parentTable.getElementsByTagName('input');
+		if (masterToggler.checked) {
+			for (var i = 0; i < checkboxes.length; i++) {
+				if (checkboxes[i].type == 'checkbox') {
+					checkboxes[i].checked = true;
+				}
+			}
+		} else {
+			for (var i = 0; i < checkboxes.length; i++) {
+				console.log(i)
+				if (checkboxes[i].type == 'checkbox') {
+					checkboxes[i].checked = false;
+				}
 			}
 		}
 	}
