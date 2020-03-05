@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 	<head>
+		<meta http-equiv="refresh" content="2" />
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="style.css">
@@ -405,5 +406,45 @@
 				</table>
 			</div>
 		</div>
+		
+		<div class="box">
+			<a class="button" href="#popup1">Let me Pop up</a>
+		</div>
+		<div id="popup1" class="overlay">
+			<div class="popup">
+				<h2>Here i am</h2>
+				<a class="close" href="#">&times;</a>
+				<div class="content">
+				Thank to pop me out of that button, but now i'm done so you can close this window.
+				</div>
+			</div>
+		</div>
+		
+		<div id="overlay" class="overlay" onclick="toggleOverlay()">
+		<header>
+			<h1>What is this sorcery?</h1>
+			<p>Or &apos;about this document&apos;</p>
+		</header>
+		<p>This file aims to provide some reference material to people creating custom templates (<code>content-download-template.php</code>) for the <a href="https://wordpress.org/plugins/download-monitor/" rel="noreferrer noopener">Download Monitor plugin</a> for <a href="https://wordpress.org/" rel="noreferrer noopener">WordPress</a>. I created this page after I was unable to find any <a href="https://www.download-monitor.com/kb/" rel="noreferrer noopener">documentation by its authors</a> that was to my liking. I based this document on the <a href="https://plugins.trac.wordpress.org/browser/download-monitor/tags/4.4.2/src/Download/Download.php" title="download-monitor/src/Download/Download.php" rel="noreferrer noopener"><code>DLM_Download</code></a> and <a href="https://plugins.trac.wordpress.org/browser/download-monitor/tags/4.4.2/src/Version/Version.php" title="download-monitor/src/Version/Version.php" rel="noreferrer noopener"><code>DLM_Download_Version</code></a> classes from version <a href="https://plugins.trac.wordpress.org/browser/download-monitor/tags/4.4.2" rel="noreferrer noopener">4.4.2</a> (released on <code>20190403</code>) of the plugin.</p>
+
+
+		<hr>
+		
+					<td>Sources for this document</td>
+					<td><a href="https://github.com/Spartelfant/download-monitor-template" rel="noreferrer noopener">GitHub</a></td>
+				</tr>
+				<tr>
+					<td>Copyright</td>
+					<td>2020 <a href="https://github.com/spartelfant" rel="noreferrer noopener">Bart Kuijper aka Spartelfant</a></td>
+				</tr>
+				<tr>
+					<td>License</td>
+					<td><a href="https://www.gnu.org/licenses/gpl-2.0.html" rel="noreferrer noopener">GPLv2 or later</a></td>
+				</tr>
+			</table>
+		</div>
+		
+		<footer>
+		</footer>
 	</body>
 </html>
