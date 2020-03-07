@@ -1,6 +1,6 @@
 body {
 	font-family: verdana, sans-serif;
-	background-color: #eee;
+	background: #eee;
 	color: #444;
 	margin: 0.5em;
 	padding: 0.5em;
@@ -44,63 +44,34 @@ samp,
 
 .method {
 	color: #080;
-	white-space: nowrap;
 }
 
 .type {
 	color: #800;
-	white-space: nowrap;
 }
 
 .variable {
 	color: #008;
-	white-space: nowrap;
 }
 
 .value {
 	color: #808;
-	white-space: nowrap;
 }
 
 .deprecated {
 	color: #0408;
-	white-space: nowrap;
 }
 
 .infonote {
 	color: #08B;
 	font-weight: normal;
+	text-decoration: unset;
+	border-bottom: 2px dotted #08F;
 }
 
-header {
-	text-align: center;
-	white-space: nowrap;
-	border-top: 1px solid currentColor;
-	border-bottom: 1px solid currentColor;
-	border-image: linear-gradient(to right, transparent, currentColor, transparent);
-	border-image-slice: 1;
-	padding: 0;
-	margin: 0.5em;
-}
-
-header p {
-	margin-left: 0.5em;
-	margin-top: -1em;
-	margin-right: 0.5em;
-	margin-bottom: 1.5em;
-	white-space: nowrap;
-}
-
-header p::before {
-	content: "\02014";
-	margin-right: 0.5em;
-	white-space: nowrap;
-}
-
-header p::after {
-	content: "\02014";
-	margin-left: 0.5em;
-	white-space: nowrap;
+.infonote::after {
+	/* LOW ASTERISK */
+	content: "\2217";
 }
 
 .toggleExpandCollapse-lbl {
@@ -193,7 +164,7 @@ th .toggleExpandCollapse-lbl::after {
 	gap: 1em;
 	place-items: stretch;
 	place-content: start;
-	grid-template-areas: "head head" "left right";
+	grid-template-areas: "title title" "left right";
 }
 
 .grid-child {
@@ -208,7 +179,32 @@ th .toggleExpandCollapse-lbl::after {
 	grid-area: right;
 }
 
-.grid-child.head {
-	grid-area: head;
+.grid-child.title {
+	grid-area: title;
+	width: 100%;
 	text-align: center;
+	border-top: 1px solid currentColor;
+	border-bottom: 1px solid currentColor;
+	border-image: linear-gradient(to right, transparent, currentColor, transparent);
+	border-image-slice: 1;
+	padding: 0;
+	margin: 0.5em;
+}
+
+.grid-child.subtitle {
+	padding: 0;
+	margin-left: 0.5em;
+	margin-top: -1em;
+	margin-right: 0.5em;
+	margin-bottom: 1.5em;
+}
+
+.grid-child.subtitle::before {
+	content: "\02014";
+	margin-right: 0.5em;
+}
+
+.grid-child.subtitle::after {
+	content: "\02014";
+	margin-left: 0.5em;
 }

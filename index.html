@@ -9,11 +9,9 @@
 	</head>
 	<body>
 		<div class="grid-parent">
-			<div class="grid-child head">
-				<header>
-					<h1>Download Monitor template cheat sheet</h1>
-					<p>grouped by category, only the most-used methods are shown by default</p>
-				</header>
+			<div class="grid-child title">
+				<h1>Download Monitor template cheat sheet</h1>
+				<div class="grid-child subtitle">grouped by category, only the most-used methods are shown by default</div>
 			</div>
 			<div class="grid-child left">
 				<table>
@@ -23,7 +21,7 @@
 								<input id="DLM_Download" class="toggleExpandCollapse-chk" type="checkbox" onclick="toggleExpandCollapse(this)" />
 								<label for="DLM_Download" class="toggleExpandCollapse-lbl" tabindex="0">
 								<code>
-								<span class="type">object</span> <span class="variable">$dlm_download</span> <abbr class="infonote" title="$dlm_download holds an instance of the DLM_Download class">&#x1F6C8;</abbr>
+								<span class="type">object</span> <span class="variable">$dlm_download</span> <abbr class="infonote" title="$dlm_download holds an instance of the DLM_Download class"></abbr>
 								</code>
 								</label>
 							</th>
@@ -72,7 +70,7 @@
 						<tr>
 							<td>
 								<input id="get_author" class="toggleExpandCollapse-chk" type="checkbox">
-								<label for="get_author" class="toggleExpandCollapse-lbl" tabindex="0"><code><span class="method">get_author()</span> : <span class="type">string</span> <abbr class="infonote" title="get_author() should return the user id as an integer type, but actually returns it as a string type.">&#x1F6C8;</abbr></code></label>
+								<label for="get_author" class="toggleExpandCollapse-lbl" tabindex="0"><code><span class="method">get_author()</span> : <span class="type">string</span> <abbr class="infonote" title="get_author() should return the user id as an integer type, but actually returns it as a string type."></abbr></code></label>
 								<div class="collapsible-content">
 									<div class="content-inner"><code>
 										<span class="method">get_the_author()</span> : <span class="type">string</span><br>
@@ -186,10 +184,10 @@
 						<tr>
 							<td>
 								<input id="get_version" class="toggleExpandCollapse-chk" type="checkbox">
-								<label for="get_version" class="toggleExpandCollapse-lbl" tabindex="0"><code><span class="method">get_version()</span> : <span class="type">object</span> <abbr class="infonote" title="get_version() returns an instance of the DLM_Download_Version class">&#x1F6C8;</abbr></code></label>
+								<label for="get_version" class="toggleExpandCollapse-lbl" tabindex="0"><code><span class="method">get_version()</span> : <span class="type">object</span> <abbr class="infonote" title="get_version() returns an instance of the DLM_Download_Version class"></abbr></code></label>
 								<div class="collapsible-content">
 									<div class="content-inner"><code>
-										<span class="method">set_version( <span class="type">object</span> <span class="variable">$version</span> ) <abbr class="infonote" title="set_version( $version ) expects an instance of the DLM_Download_Version class">&#x1F6C8;</abbr></span><br>
+										<span class="method">set_version( <span class="type">object</span> <span class="variable">$version</span> ) <abbr class="infonote" title="set_version( $version ) expects an instance of the DLM_Download_Version class"></abbr></span><br>
 										<span class="method">get_versions()</span> : <span class="type">array</span><br>
 										<span class="method">get_version_ids()</span> : <span class="type">array</span><br>
 										<span class="method">get_version_id_version_name( <span class="type">string</span> <span class="variable">$name</span> )</span> : <span class="type">int</span><br>
@@ -211,13 +209,25 @@
 								<input id="DLM_Download_Version" class="toggleExpandCollapse-chk" type="checkbox" onclick="toggleExpandCollapse(this)" />
 								<label for="DLM_Download_Version" class="toggleExpandCollapse-lbl" tabindex="0">
 								<code>
-								<span class="type">object</span> <span class="variable">$dlm_download</span>-><span class="method">get_version()</span> <abbr class="infonote" title="$dlm_download->get_version() returns an instance of the DLM_Download_Version class">&#x1F6C8;</abbr>
+								<span class="type">object</span> <span class="variable">$dlm_download</span>-><span class="method">get_version()</span> <abbr class="infonote" title="$dlm_download->get_version() returns an instance of the DLM_Download_Version class"></abbr>
 								</code>
 								</label>
 							</th>
 						</tr>
 					</thead>
 					<tbody>
+						<tr>
+							<td>
+								<input id="version_is_latest" class="toggleExpandCollapse-chk" type="checkbox">
+								<label for="version_is_latest" class="toggleExpandCollapse-lbl" tabindex="0"><code><span class="method">is_latest()</span> : <span class="type">bool</span></code></label>
+								<div class="collapsible-content">
+									<div class="content-inner"><code>
+										<span class="method">set_latest( <span class="type">bool</span> <span class="variable">$latest</span> )</span><br>
+										</code>
+									</div>
+								</div>
+							</td>
+						</tr>
 						<tr>
 							<td>
 								<input id="version_get_author" class="toggleExpandCollapse-chk" type="checkbox">
@@ -257,65 +267,12 @@
 						</tr>
 						<tr>
 							<td>
-								<input id="version_get_id" class="toggleExpandCollapse-chk" type="checkbox">
-								<label for="version_get_id" class="toggleExpandCollapse-lbl" tabindex="0"><code><span class="method">get_id()</span> : <span class="type">int</span></code></label>
-								<div class="collapsible-content">
-									<div class="content-inner"><code>
-										<span class="method">set_id( <span class="type">int</span> <span class="variable">$id</span> )</span><br>
-										</code>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
+								<!-- download_id is the id of the download, the same number used for the shortcode, and is the same for all versions of a download -->
 								<input id="version_get_download_id" class="toggleExpandCollapse-chk" type="checkbox">
 								<label for="version_get_download_id" class="toggleExpandCollapse-lbl" tabindex="0"><code><span class="method">get_download_id()</span> : <span class="type">int</span></code></label>
 								<div class="collapsible-content">
 									<div class="content-inner"><code>
 										<span class="method">set_download_id( <span class="type">int</span> <span class="variable">$download_id</span> )</span><br>
-										</code>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td><span class="method">get_title()</span> : <span class="type">string</span></td>
-						</tr>
-						<tr>
-							<td>
-								<input id="version_get_version" class="toggleExpandCollapse-chk" type="checkbox">
-								<label for="version_get_version" class="toggleExpandCollapse-lbl" tabindex="0"><code><span class="method">get_version()</span> : <span class="type">string</span></code></label>
-								<div class="collapsible-content">
-									<div class="content-inner"><code>
-										<span class="method">set_version( <span class="type">string</span> <span class="variable">$version</span> )</span><br>
-										<span class="method">get_version_number()</span> : <span class="type">string</span><br>
-										<span class="method">has_version_number()</span> : <span class="type">bool</span><br>
-										<span class="method">get_version_slug()</span> : <span class="type">string</span><br>
-										</code>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<input id="version_is_latest" class="toggleExpandCollapse-chk" type="checkbox">
-								<label for="version_is_latest" class="toggleExpandCollapse-lbl" tabindex="0"><code><span class="method">is_latest()</span> : <span class="type">bool</span></code></label>
-								<div class="collapsible-content">
-									<div class="content-inner"><code>
-										<span class="method">set_latest( <span class="type">bool</span> <span class="variable">$latest</span>)</span><br>
-										</code>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<input id="version_get_menu_order" class="toggleExpandCollapse-chk" type="checkbox">
-								<label for="version_get_menu_order" class="toggleExpandCollapse-lbl" tabindex="0"><code><span class="method">get_menu_order()</span> : <span class="type">int</span></code></label>
-								<div class="collapsible-content">
-									<div class="content-inner"><code>
-										<span class="method">set_menu_order( <span class="type">int</span> <span class="variable">$menu_order</span> )</span><br>
 										</code>
 									</div>
 								</div>
@@ -348,8 +305,20 @@
 						</tr>
 						<tr>
 							<td>
+								<input id="version_get_filetype" class="toggleExpandCollapse-chk" type="checkbox">
+								<label for="version_get_filetype" class="toggleExpandCollapse-lbl" tabindex="0"><code><span class="method">get_filetype()</span> : <span class="type">string</span></code></label>
+								<div class="collapsible-content">
+									<div class="content-inner"><code>
+										<span class="method">set_filetype( <span class="type">string</span> <span class="variable">$filetype</span> )</span><br>
+										</code>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
 								<input id="version_get_hash" class="toggleExpandCollapse-chk" type="checkbox">
-								<label for="version_get_hash" class="toggleExpandCollapse-lbl" tabindex="0"><code><span class="method">get_*()</span> &amp; <span class="method">set_*()</span> hashes <abbr class="infonote" title="md5 / sha1 / sha256 / crc32b">&#x1F6C8;</abbr></code></label>
+								<label for="version_get_hash" class="toggleExpandCollapse-lbl" tabindex="0"><code><span class="method">get_</span>[<span class="method">md5</span>|<span class="method">sha1</span>|<span class="method">sha256</span>|<span class="method">crc32b</span>]<span class="method">()</span></code></label>
 								<div class="collapsible-content">
 									<div class="content-inner"><code>
 										<span class="method">get_md5()</span> : <span class="type">string</span><br>
@@ -360,6 +329,31 @@
 										<span class="method">set_sha256( <span class="type">string</span> <span class="variable">$sha256</span> )</span><br>
 										<span class="method">get_crc32b()</span> : <span class="type">string</span><br>
 										<span class="method">set_crc32b( <span class="type">string</span> <span class="variable">$crc32b</span> )</span><br>
+										</code>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<!-- id is the id of this version of the download, not the same as the shortcode, unique for each version of a download -->
+								<input id="version_get_id" class="toggleExpandCollapse-chk" type="checkbox">
+								<label for="version_get_id" class="toggleExpandCollapse-lbl" tabindex="0"><code><span class="method">get_id()</span> : <span class="type">int</span></code></label>
+								<div class="collapsible-content">
+									<div class="content-inner"><code>
+										<span class="method">set_id( <span class="type">int</span> <span class="variable">$id</span> )</span><br>
+										</code>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input id="version_get_menu_order" class="toggleExpandCollapse-chk" type="checkbox">
+								<label for="version_get_menu_order" class="toggleExpandCollapse-lbl" tabindex="0"><code><span class="method">get_menu_order()</span> : <span class="type">int</span></code></label>
+								<div class="collapsible-content">
+									<div class="content-inner"><code>
+										<span class="method">set_menu_order( <span class="type">int</span> <span class="variable">$menu_order</span> )</span><br>
 										</code>
 									</div>
 								</div>
@@ -378,6 +372,9 @@
 							</td>
 						</tr>
 						<tr>
+							<td><span class="method">get_title()</span> : <span class="type">string</span></td>
+						</tr>
+						<tr>
 							<td>
 								<input id="version_get_url" class="toggleExpandCollapse-chk" type="checkbox">
 								<label for="version_get_url" class="toggleExpandCollapse-lbl" tabindex="0"><code><span class="method">get_url()</span> : <span class="type">string</span></code></label>
@@ -391,11 +388,14 @@
 						</tr>
 						<tr>
 							<td>
-								<input id="version_get_filetype" class="toggleExpandCollapse-chk" type="checkbox">
-								<label for="version_get_filetype" class="toggleExpandCollapse-lbl" tabindex="0"><code><span class="method">get_filetype()</span> : <span class="type">string</span></code></label>
+								<input id="version_get_version" class="toggleExpandCollapse-chk" type="checkbox">
+								<label for="version_get_version" class="toggleExpandCollapse-lbl" tabindex="0"><code><span class="method">get_version()</span> : <span class="type">string</span></code></label>
 								<div class="collapsible-content">
 									<div class="content-inner"><code>
-										<span class="method">set_filetype( <span class="type">string</span> <span class="variable">$filetype</span> )</span><br>
+										<span class="method">set_version( <span class="type">string</span> <span class="variable">$version</span> )</span><br>
+										<span class="method">get_version_number()</span> : <span class="type">string</span><br>
+										<span class="method">has_version_number()</span> : <span class="type">bool</span><br>
+										<span class="method">get_version_slug()</span> : <span class="type">string</span><br>
 										</code>
 									</div>
 								</div>
