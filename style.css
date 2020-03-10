@@ -87,7 +87,7 @@ samp,
 	display: block;
 	cursor: pointer;
 	color: currentColor;
-	transition: all 0.25s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 
 .collapsible-lbl::before {
@@ -95,7 +95,7 @@ samp,
 	float: right;
 	width: 1em;
 	margin-right: 0;
-	transition: all 0.25s ease-in-out;
+	transition: all 0.5s ease-in-out;
 	/* PLUS SIGN */
 	content: "\2B";
 	opacity: 1;
@@ -111,7 +111,7 @@ th .collapsible-lbl::before {
 	float: right;
 	width: 1em;
 	margin-right: -1em;
-	transition: all 0.25s ease-in-out;
+	transition: all 0.5s ease-in-out;
 	/* MINUS SIGN */
 	content: "\2212";
 	opacity: 0;
@@ -145,7 +145,7 @@ th .collapsible-lbl::after {
 .collapsible-content {
 	max-height: 0;
 	overflow: hidden;
-	transition: max-height 0.25s ease-in-out;
+	transition: all 0.5s ease-in-out;
 	padding: 0;
 }
 
@@ -170,7 +170,7 @@ th .collapsible-lbl::after {
 	text-align: center;
 	border-top: 1px solid currentColor;
 	border-bottom: 1px solid currentColor;
-	border-image: linear-gradient(to right, transparent, #08B, transparent);
+	border-image: linear-gradient(to right, transparent, currentColor, transparent);
 	border-image-slice: 1;
 	padding: 0;
 	margin: 0.5em;
