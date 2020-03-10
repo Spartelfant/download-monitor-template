@@ -145,12 +145,12 @@ th .collapsible-lbl::after {
 .collapsible-content {
 	max-height: 0;
 	overflow: hidden;
-	transition: all 0.5s ease-in-out;
+	transition: max-height 0.5s ease;
 	padding: 0;
 }
 
 .collapsible-chk:checked+.collapsible-lbl+.collapsible-content {
-	max-height: 100vh;
+	max-height: 10em;
 }
 
 .grid-item {
