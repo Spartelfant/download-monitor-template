@@ -24,7 +24,9 @@ table {
 	text-align: left;
 }
 
-tr, th, td {
+tr,
+th,
+td {
 	border: none;
 	border-radius: 0.5em;
 	padding: 0.25em;
